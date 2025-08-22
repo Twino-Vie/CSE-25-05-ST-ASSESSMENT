@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/cust.css">
+</head>
+
+<body class="bg-light p-4">
+    <main class="dashboard">
+        <div class="top-row">
+            <div class="card big-card">
+                <div class="card-content">
+                    <div>
+                        <p class="card-title">UGX 50,000,000</p>
+                        <p class="card-subtitle">Sales</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div>
+                        <p class="card-title">UGX 15,000,000</p>
+                        <p class="card-subtitle">Orders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="container">
+        <h1 class="mb-4 text-center">Add Product</h1>
+        <!-- Card wrapper -->
+        <div class="card shadow-sm p-4 mb-4">
+            <form id="productForm" class="row g-3">
+
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Product Name" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-select" id="category" required>
+                        <option value="">Select category</option>
+                        <option value="SmartPhones">Smart Phones</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Interior Designs">Interior Designs</option>
+                        <option value="Laptops">Laptops</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="price" class="form-label">Price (UGX)</label>
+                    <input type="number" class="form-control" id="price" placeholder="Price" min="0" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="color" class="form-label">Color</label>
+                    <input type="text" class="form-control" id="color" placeholder="Color" required>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="image" class="form-label">Upload Image</label>
+                    <input type="file" class="form-control" id="image" accept="image/*" required>
+                </div>
+
+                <div class="col-12 d-flex justify-content-between mt-3">
+                    <button type="submit" class="btn btn-warning text-white">Save</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Product Table -->
+        <h2 class="mb-3">Product List</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped" id="productTable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price (UGX)</th>
+                        <th>Color</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Product rows-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/index1.js"></script>
+</body>
+
+</html>

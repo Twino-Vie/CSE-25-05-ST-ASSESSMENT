@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Add Product
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css", rel="stylesheet")
+    link(rel="stylesheet", href="/cust.css")
+  body.bg-light.p-4
+  main.dashboard
+      .top-row
+        .card.big-card
+          .card-content
+            div
+              p.card-title UGX 50,000,000
+              p.card-subtitle Sales
+            .divider
+            div
+              p.card-title UGX 15,000,000
+              p.card-subtitle Orders
+    .container
+      h1.mb-4.text-center Add Product
+      // Card wrapper
+      .card.shadow-sm.p-4.mb-4
+        form#productForm.row.g-3(method="POST", action="addproduct")
+          .col-md-6
+            label.form-label(for="name") Product Name
+            input#name.form-control(type="text", placeholder="Product Name", required)
+          .col-md-6
+            label.form-label(for="category") Category
+            select#category.form-select(required)
+              option(value=) Select category
+              option(value="SmartPhones") Smart Phones
+              option(value="Fashion") Fashion
+              option(value="Interior Designs") Interior Designs
+              option(value="Laptops") Laptops
+          .col-md-6
+            label.form-label(for="price") Price (UGX)
+            input#price.form-control(type="number", placeholder="Price", min="0", required)
+          .col-md-3
+            label.form-label(for="color") Color
+            input#color.form-control(type="text", placeholder="Color", required)
+          .col-md-3
+            label.form-label(for="image") Upload Image
+            input#image.form-control(type="file", accept="image/*", required)
+          .col-12.d-flex.justify-content-between.mt-3
+            button.btn.btn-warning.text-white(type="submit") Save
+            button.btn.btn-secondary(type="reset") Clear
+      // Product Table
+      h2.mb-3 Product List
+      .table-responsive
+        table#productTable.table.table-bordered.table-striped
+          thead.table-dark
+            tr
+              th ID
+              th Name
+              th Category
+              th Price (UGX)
+              th Color
+              th Image
+          tbody#productTableBody
+            // Product rows
+    // Bootstrap JS
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js")
+    script(src="/index1.js")

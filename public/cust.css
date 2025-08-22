@@ -1,0 +1,9 @@
+
+body { font-family: Arial, sans-serif; margin: 20px; }
+    label { display: block; margin: 10px 0 5px; }
+    input, select { width: 100%; padding: 8px; margin-bottom: 10px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 8px; text-align: left; }
+    .error-msg { color: red; font-size: 12px; }
+    .invalid { border: 1px solid red; }
